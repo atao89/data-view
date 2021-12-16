@@ -36,7 +36,7 @@ export default {
   .center-title {
     position: absolute;
     font-size: 30px;
-    font-weight: bold;
+    // font-weight: bold;
     left: 50%;
     top: 15px;
     transform: translateX(-50%);

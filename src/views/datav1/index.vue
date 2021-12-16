@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import TopHeader from "./top-header";
-import DigitalFlop from "./digital-flop";
-import RankingBoard from "./ranking-board";
-import RoseChart from "./rose-chart";
-import WaterLevelChart from "./water-level-chart";
-import ScrollBoard from "./scroll-board";
-import Cards from "./cards";
+import TopHeader from "./TopHeader";
+import DigitalFlop from "./DigitalFlop";
+import RankingBoard from "./RankingBoard";
+import RoseChart from "./RoseChart";
+import WaterLevelChart from "./WaterLevelChart";
+import ScrollBoard from "./ScrollBoard";
+import Cards from "./Cards";
 
 export default {
   name: "DataView1",
@@ -62,7 +62,7 @@ export default {
 
   #dv-full-screen-container {
     // height: 100% !important;
-    // background-image: url("../../assets/img/bg.png");
+    background-image: url("../../assets/img/bg1.png");
     background-size: 100% 100%;
     box-shadow: 0 0 3px blue;
     display: flex;

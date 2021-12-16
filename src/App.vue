@@ -1,15 +1,27 @@
 <template>
   <div id="app">
-    <div class="tabbar">
+    <div
+      class="tabbar"
+      :style="{
+        right:
+          $route.path == '/datav1'
+            ? '180px'
+            : $route.path == '/datav2'
+            ? '260px'
+            : $route.path == '/datav3'
+            ? '120px'
+            : '',
+      }"
+    >
       <router-link to="/datav1" :class="{ selected: $route.path == '/datav1' }"
         >page1</router-link
       >
       <router-link to="/datav2" :class="{ selected: $route.path == '/datav2' }"
         >page2</router-link
       >
-      <!-- <router-link to="/datav3" :class="{ selected: $route.path == '/datav3' }"
+      <router-link to="/datav3" :class="{ selected: $route.path == '/datav3' }"
         >page3</router-link
-      > -->
+      >
     </div>
 
     <div class="screen-full">
@@ -75,15 +87,12 @@ export default {
 <style lang="scss">
 #app {
   height: 100%;
-  color: #fff;
-  background-image: url("assets/img/bg.png");
 
   .tabbar {
     position: absolute;
     width: 200px;
     height: 120px;
     top: 30px;
-    right: 160px;
     cursor: pointer;
     z-index: 1999;
     a {

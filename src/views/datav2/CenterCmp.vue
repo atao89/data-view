@@ -22,6 +22,9 @@
         <div class="station-info">
           监控中心<span>415</span>
         </div>
+        <div class="station-info">
+          T1<span>698</span>
+        </div>
       </div>
 
       <dv-active-ring-chart class="ccmc-middle" :config="config" />
@@ -32,6 +35,9 @@
         </div>
         <div class="station-info">
           <span>317</span>其他
+        </div>
+        <div class="station-info">
+          <span>1050</span>T2
         </div>
       </div>
 
@@ -67,6 +73,14 @@ export default {
           {
             name: '其他',
             value: 317
+          },
+          {
+            name: 'T1',
+            value: 698
+          },
+          {
+            name: 'T2',
+            value: 1050
           }
         ],
         color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
@@ -76,7 +90,7 @@ export default {
       },
 
       labelConfig: {
-        data: ['收费站', '监控中心', '道路外场', '其他']
+        data: ['收费站', '监控中心', '道路外场', '其他', 'T1', 'T2']
       }
     }
   }
@@ -142,7 +156,7 @@ export default {
       font-size: 24px;
 
       span {
-        font-size: 40px;
+        font-size: 30px;
         font-weight: bold;
       }
 
@@ -154,6 +168,7 @@ export default {
     }
 
     .ccmc-left {
+      justify-content: flex-start;
       align-items: flex-end;
 
       span {
@@ -162,6 +177,7 @@ export default {
     }
 
     .ccmc-right {
+      justify-content: flex-start;
       align-items: flex-start;
 
       span {
