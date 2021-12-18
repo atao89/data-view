@@ -9,8 +9,9 @@
             : $route.path == '/datav2'
             ? '260px'
             : $route.path == '/datav3'
-            ? '120px'
+            ? '450px'
             : '',
+        top: $route.path == '/datav3' ? '20px' : '32px',
       }"
     >
       <router-link to="/datav1" :class="{ selected: $route.path == '/datav1' }"
@@ -24,7 +25,7 @@
       >
     </div>
 
-    <div class="screen-full">
+    <div class="screen-full" v-if="$route.path != '/datav3'">
       <span v-show="!isFullscreen" @click="handleFullScreen">
         <i class="iconfont icon-quanping"></i>
         全屏模式
@@ -87,6 +88,13 @@ export default {
 <style lang="scss">
 #app {
   height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  padding: 0;
+  margin: 0;
+  min-width: 1360px;
 
   .tabbar {
     position: absolute;
